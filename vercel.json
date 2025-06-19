@@ -1,12 +1,6 @@
 {
   "version": 2,
   "name": "richorbroke",
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -27,6 +21,15 @@
     },
     {
       "source": "/maxresdefault.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.(css|js))",
       "headers": [
         {
           "key": "Cache-Control",
