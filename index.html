@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Portfolio Guesser</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor" id="cursor"></div>
+    
+    <!-- Progress bars container -->
+    <div class="progress-bars-container" id="progressBarsContainer"></div>
+    
+    <div class="container">        <div class="header">
+            <h1>Crypto Portfolio Guesser</h1>
+            <div class="author">@deepugami</div>
+        </div>
+
+        <div class="question-counter">
+            <span id="currentQuestion">1</span> / <span id="totalQuestions">18</span>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="quiz-container" id="quizContainer">
+            <div class="question-card" id="questionCard">
+                <div class="question-text" id="questionText"></div>
+                <div class="answer-buttons">
+                    <button class="answer-btn yes-btn" id="yesBtn">YES</button>
+                    <button class="answer-btn no-btn" id="noBtn">NO</button>
+                </div>
+            </div>
+        </div>        <div class="result-container" id="resultContainer" style="display: none;">
+            <div class="result-card">
+                <div class="result-portfolio" id="resultPortfolio"></div>
+                <div class="result-comment" id="resultComment"></div>
+                <div class="result-buttons">
+                    <button class="restart-btn" onclick="restartQuiz()">Take Quiz Again</button>
+                    <button class="share-btn" onclick="shareResult()">
+                        <svg class="x-logo" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation-hint">
+            <p>Scroll down to go back to previous questions</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
